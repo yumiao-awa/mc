@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>煜林服务器 - 我的世界网易版</title>
+  <meta name="description" content="煜林服务器 — 专注网易版我的世界，提供纯净、公平、有趣的多人游戏体验。">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- 引入 Font Awesome 图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* 全局样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    header {
+      background: linear-gradient(135deg, #4a90e2, #5e60ce);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+    /* 特色区块 */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 40px 0;
+    }
+    .feature-card {
+      flex: 1 1 300px;
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    .feature-card i {
+      font-size: 2.2rem;
+      color: #5e60ce;
+      margin-bottom: 15px;
+    }
+    .feature-card h3 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    /* 加入方式 */
+    .join-section {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 40px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .join-section h2 {
+      margin-bottom: 20px;
+      color: #5e60ce;
+    }
+    .join-info {
+      font-size: 1.2rem;
+      margin: 15px 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #5e60ce;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #4a50b0;
+    }
+
+    /* 页脚 */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #7f8c8d;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+    }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1.1rem; }
+      .features { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>煜林服务器</h1>
+      <p>网易版《我的世界》纯净多人游戏社区 · 公平 · 稳定 · 有趣</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- 服务器特色 -->
+    <div class="features">
+      <div class="feature-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>纯净无外挂</h3>
+        <p>严格反作弊机制，保障每位玩家的游戏体验。</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-users"></i>
+        <h3>活跃社区</h3>
+        <p>每日在线玩家众多，组队、交易、共建轻松实现。</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-cube"></i>
+        <h3>丰富玩法</h3>
+        <p>生存、副本、小游戏、红石挑战……总有一款适合你！</p>
+      </div>
+    </div>
+
+    <!-- 加入方式 -->
+    <div class="join-section">
+      <h2><i class="fas fa-sign-in-alt"></i> 立即加入我们！</h2>
+      <div class="join-info">
+        <p><strong>服务器名称：</strong>煜林服务器</p>
+        <p><strong>服务器号：5020533</strong>在网易版“租赁服”搜索</p>
+        <p><strong>官方QQ群：</strong>748174745（点击加入）</p>
+      </div>
+      <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=aB9R8BaWWIfkXd3qlagCQTPKimBdc%2FINxjBm8ofSOCX6JjxL%2F0M6wlp%2BV4gd3EaS&busi_data=eyJncm91cENvZGUiOiI3NDgxNzQ3NDUiLCJ0b2tlbiI6IjF0a3BJL0NFS1BXMFd1dkRsR0xVNnE4Rys4enNCMmhHcWZFcS9yb050OUIvLzl1VEdWeVhpOUtJZGNRUk9yNEUiLCJ1aW4iOiIyODI1OTI0NzAzIn0%3D&data=ETYPlnpelqQJePiZ3IrecZur-9ZXZOkTOMiEhPM3PxgZAnn-5MmQtqKG1LtYwCxbwJBKTo2Pp9gI9fVb3BK5tg&svctype=4&tempid=h5_group_info" target="_blank" class="btn">
+        <i class="fab fa-qq"></i> 加入QQ群
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 煜林服务器团队 · 本页面为静态宣传页，非官方网易产品</p>
+      <p>服主：麦当当&白子<br>美术指导：Qwen<br>网站技术组：鱼喵<br>后期技术组：小鱼<br>托管机构：github</p>
+    </div>
+  </footer>
+
+</body>
+</html>
