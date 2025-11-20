@@ -103,6 +103,42 @@
       background: #4a50b0;
     }
 
+    /* ✅ 新增：三卡片横向布局 */
+    .three-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .card {
+      flex: 1 1 280px;
+      background: white;
+      border-radius: 12px;
+      padding: 25px 20px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(94, 96, 206, 0.15);
+    }
+    .card i {
+      font-size: 2rem;
+      color: #5e60ce;
+      margin-bottom: 14px;
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
     /* 页脚 */
     footer {
       text-align: center;
@@ -116,7 +152,10 @@
     @media (max-width: 768px) {
       header h1 { font-size: 2rem; }
       header p { font-size: 1.1rem; }
-      .features { flex-direction: column; }
+      .features,
+      .three-cards { 
+        flex-direction: column; 
+      }
     }
   </style>
 </head>
@@ -149,7 +188,7 @@
       </div>
     </div>
 
-    <!-- 加入方式 -->
+    <!-- 加入方式（大卡片） -->
     <div class="join-section">
       <h2><i class="fas fa-sign-in-alt"></i> 立即加入我们！</h2>
       <div class="join-info">
@@ -159,6 +198,25 @@
       </div>
       <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=aB9R8BaWWIfkXd3qlagCQTPKimBdc%2FINxjBm8ofSOCX6JjxL%2F0M6wlp%2BV4gd3EaS&busi_data=eyJncm91cENvZGUiOiI3NDgxNzQ3NDUiLCJ0b2tlbiI6IjF0a3BJL0NFS1BXMFd1dkRsR0xVNnE4Rys4enNCMmhHcWZFcS9yb050OUIvLzl1VEdWeVhpOUtJZGNRUk9yNEUiLCJ1aW4iOiIyODI1OTI0NzAzIn0%3D&data=ETYPlnpelqQJePiZ3IrecZur-9ZXZOkTOMiEhPM3PxgZAnn-5MmQtqKG1LtYwCxbwJBKTo2Pp9gI9fVb3BK5tg&svctype=4&tempid=h5_group_info" target="_blank" class="btn">
         <i class="fab fa-qq"></i> 加入QQ群
+      </a>
+    </div>
+
+    <!-- ✅ 三卡片区：名人堂 / 专业团队 / 公告 -->
+    <div class="three-cards">
+      <a href="hall" class="card">
+        <i class="fas fa-trophy"></i>
+        <h3>名人堂</h3>
+        <p>见证煜林闪耀群星</p>
+      </a>
+      <a href="welcome" class="card">
+        <i class="fas fa-user-tie"></i>
+        <h3>专业团队</h3>
+        <p>我们有专业的人员</p>
+      </a>
+      <a href="new" class="card">
+        <i class="fas fa-bullhorn"></i>
+        <h3>公告</h3>
+        <p>查看最新服务器动态</p>
       </a>
     </div>
   </div>
