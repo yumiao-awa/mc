@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>历史公告 - 煜林服务器</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #fff;
+      color: #000;
+      line-height: 1.6;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .divider {
+      height: 1px;
+      background: #000;
+      margin: 20px 0;
+    }
+
+    /* 公告容器 */
+    .notice {
+      margin: 0;
+    }
+
+    /* 可点击标题行 */
+    .notice-header {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 12px 0;
+      user-select: none;
+      display: flex;
+      align-items: center;
+    }
+    .notice-header::before {
+      content: "▼";
+      margin-right: 8px;
+      font-size: 0.8em;
+      opacity: 0.5;
+      transition: transform 0.3s;
+    }
+    .notice-header.active::before {
+      transform: rotate(90deg);
+    }
+
+    /* 展开内容 */
+    .notice-body {
+      display: none;
+      padding: 16px 0 24px 28px;
+      border-left: 2px solid #999;
+    }
+
+    .summary {
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .changes {
+      margin-bottom: 20px;
+    }
+    .changes li {
+      margin: 6px 0;
+      list-style-type: "• ";
+      padding-left: 4px;
+    }
+
+    /* 跳转按钮 —— 复用你主页的 .btn 样式 */
+    .jump-btn {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 8px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+    .jump-btn:hover {
+      opacity: 0.8;
+    }
+
+    /* 底部版权 */
+    .footer-note {
+      text-align: center;
+      margin-top: 20px;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 30px 15px; }
+      .notice-header { font-size: 0.95rem; }
+      .jump-btn { padding: 7px 18px; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="divider"></div>
+  <div style="text-align:center;font-weight:bold;">历史公告</div>
+  <div class="divider"></div>
+
+<div class="notice">               <!--  容器：一条完整公告 -->
+  <div class="notice-header" onclick="toggle(this)">
+    ——2025年11月20日 不停服公告——   <!--  可点击标题行 -->
+  </div>
+  <div class="notice-body">         <!--  展开内容（默认隐藏） -->
+    <div class="summary">11月20日-指令优化</div>
+    <ul class="changes">
+      <li>• 升级了部分命令块指令</li>
+      <li>• 优化了流畅度</li>
+    </ul>
+    <a href="11-20.html" class="jump-btn">跳转按钮</a>
+  </div>
+</div>
+<div class="divider"></div>        <!-- 分隔下一条 -->
+
+  <div class="divider"></div>
+  <div class="footer-note">
+    煜林服务器 © 一切皆为你而缔造
+  </div>
+
+  <script>
+    function toggle(header) {
+      const body = header.nextElementSibling;
+      const isActive = header.classList.contains('active');
+      
+      // 收起所有
+      document.querySelectorAll('.notice-header').forEach(h => h.classList.remove('active'));
+      document.querySelectorAll('.notice-body').forEach(b => b.style.display = 'none');
+      
+      // 展开当前
+      if (!isActive) {
+        header.classList.add('active');
+        body.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
